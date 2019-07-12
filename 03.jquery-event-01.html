@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // css를 사용할 때
+            // 속성값은 -를 제거하고 charmel 기법으로 변환된다
+            $("#p1").click(function(){
+                $("#p1").css("backgroundColor", "salmon")
+                $("#p1").css("margin", "100px")
+            })
+
+            $("#p2").on("click", function(){
+                $(this).css("backgroundColor", "hotpink")
+                $(this).css("color", "white")
+            })
+
+            $("#p3").bind("click", function(){
+                $(this).css("fontSize", "100px")
+            })
+        })
+
+
+    </script>
+
+    <style> 
+    
+        p{
+            border: 1px solid salmon;
+            margin: 10px;
+            padding: 10px;
+            
+         
+        }
+    </style>
+</head>
+<body>
+        <p id="p1">대한민국</p>
+        <p id="p2">우리나라</p>
+        <p id="p3">Republic of Korea</p>
+
+</body>
+</html>
